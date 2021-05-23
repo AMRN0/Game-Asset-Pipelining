@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OnHit : MonoBehaviour
 {
-    public Object particleSystem;
+    public Object PS;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class OnHit : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        Instantiate(particleSystem, gameObject.transform.position, Quaternion.identity);
+        Instantiate(PS, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
 
     }
